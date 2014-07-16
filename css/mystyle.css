@@ -1,10 +1,8 @@
 
 h1, h2, h3, h4, h5, h6 {
-    color: #FF0000;
-    font-size: 200%;
+    font-size: 100%;
 }
 ul.posts {
-	color: #F00;
 	list-style-type: none;
 	margin-bottom: 2em;
 }
