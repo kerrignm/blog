@@ -5,9 +5,9 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   background-color: #C0C0C0;
-  font: 13.34px helvetica, arial, clean, sans-serif;
-  *font-size: small;
-  text-align: center;
+  font-size: 110%;
+  text-align: justify;
+  width: 40em;
 }
 
 ul.posts {
