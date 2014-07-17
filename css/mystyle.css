@@ -2,6 +2,14 @@
 h1, h2, h3, h4, h5, h6 {
     font-size: 100%;
 }
+
+body {
+  background-color: #C0C0C0;
+  font: 13.34px helvetica, arial, clean, sans-serif;
+  *font-size: small;
+  text-align: center;
+}
+
 ul.posts {
 	list-style-type: none;
 	margin-bottom: 2em;
