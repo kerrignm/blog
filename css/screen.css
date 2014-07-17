@@ -14,7 +14,7 @@ body {
     width: 64em;
     margin: 3em auto 2em auto;
     line-height: 1.5em;
-    background-image: url(/images/eg_background.jpg);
+    background-image: url(./images/eg_background.jpg);
 }
 
 ul.posts {
