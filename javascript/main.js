@@ -2,9 +2,8 @@ var c = 0;
 var t = 0;
 function timedCount()
 {
-    c = document.getElementById('txt').value;
-    c = c + 1;
     document.getElementById('txt').value = c;
+    c = c + 1;
     t = setTimeout("timedCount()", 1000);
 }
 
