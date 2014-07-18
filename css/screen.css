@@ -32,6 +32,6 @@ ul.posts span {
     font-size: 80%;
 }
 
-.targetnew  {
+a.targetnew  {
     target: _blank;
 }
