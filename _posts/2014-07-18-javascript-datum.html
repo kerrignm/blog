@@ -1,0 +1,24 @@
+---
+layout: default
+title: javascript study
+---
+
+<h2>{{ page.title }}</h2>
+<hr />
+
+<p>Resources</p>
+<p><a href="http://www.w3school.com.cn/b.asp">w3school-javascript</a></p>
+<hr />
+
+<p>Tranning</p>
+
+<p>点击下面的“开始计时”按钮来启动计时器。输入框会一直进行计时，从 0 开始。点击“停止计时”按钮可以终止计时，并将计数重置为 0。</p>
+<form>
+    <input type="button" value="开始计时" onClick="timedCount()">
+    <input type="text" id="txt">
+    <input type="button" value="停止计时" onClick="stopCount()">
+</form>
+
+<hr />
+
+<p>{{ page.date | date_to_string }}</p>
