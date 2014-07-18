@@ -8,7 +8,7 @@ body {
     background-color: white;
 }
 
-.site_normal {
+.site {
     font-size: 110%;
     text-align: justify;
     width: 64em;
@@ -32,6 +32,6 @@ ul.posts span {
     font-size: 80%;
 }
 
-a.targetnew  {
+a.open_normal  {
     target: _blank;
 }
