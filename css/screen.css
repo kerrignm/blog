@@ -33,8 +33,9 @@ ul.posts span {
 }
 
 .tranning {
+    margin: 2em;
     border-style: dashed;
-    border-width: medium;
+    border-width: thin;
     border-color: gray;
 }
 
