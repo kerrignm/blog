@@ -32,3 +32,10 @@ ul.posts span {
     font-size: 80%;
 }
 
+.tranning {
+    background-color: gray;
+    border-style: solid;
+    border-width: 5px;
+    border-color: gray;
+}
+
