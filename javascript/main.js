@@ -1,10 +1,10 @@
-var c = 0；
-var t = 0；
+var c = 0;
+var t = 0;
 function timedCount()
 {
-    document.getElementById('txt').value = c；
-    c = c + 1；
-    t = setTimeout("timedCount()", 1000)；
+    document.getElementById('txt').value = c;
+    c = c + 1;
+    t = setTimeout("timedCount()", 1000);
 }
 
 function stopCount()
