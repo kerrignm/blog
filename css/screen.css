@@ -33,9 +33,11 @@ ul.posts span {
 }
 
 .tranning {
-    margin: 2em;
+    margin: 1em;
+    padding: 1em;
     border-style: dashed;
     border-width: thin;
-    border-color: gray;
+    border-color: WhiteSmoke;
+    background-color: WhiteSmoke;
 }
 
