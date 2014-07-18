@@ -34,7 +34,7 @@ ul.posts span {
 
 .tranning {
     margin: auto 1em auto 1em;
-    /*padding: 1em auto 1em auto;*/
+    /*padding: 1em auto 1em auto; why this not working ok?*/
     padding-top: auto;
     padding-right: 1em;
     padding-bottom: auto;
