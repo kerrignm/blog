@@ -34,7 +34,11 @@ ul.posts span {
 
 .tranning {
     margin: auto 1em auto 1em;
-    padding: auto 1em auto 1em;
+    /*padding: auto 1em auto 1em;*/
+    padding-top: auto;
+    padding-right: 1em;
+    padding-bottom: auto;
+    padding-left: 1em;
     border-style: dotted;
     border-width: thin;
     border-color: DarkGray;
