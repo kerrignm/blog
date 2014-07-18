@@ -10,7 +10,7 @@ body {
 
 .site {
     font-size: 110%;
-    text-align: justify;
+    /*text-align: justify;*/
     width: 64em;
     margin: 3em auto 2em auto;
     line-height: 1.5em;
@@ -33,12 +33,12 @@ ul.posts span {
 }
 
 .tranning {
-    margin: auto 1em auto 1em;
+    /*margin: auto 1em auto 1em;*/
     padding: auto 1em auto 1em;
-    /*padding-top: auto;
+    padding-top: auto;
     padding-right: 1em;
     padding-bottom: auto;
-    padding-left: 1em;*/
+    padding-left: 1em;
     border-style: dotted;
     border-width: thin;
     border-color: DarkGray;
