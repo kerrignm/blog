@@ -24,6 +24,11 @@ description: html study data
 <br />
 <div class="tranning">
     <p>tranning navigate frame</p>
+    <ul class="posts">
+        {% for post in site.categories.trainning %} 
+            <p>{{ site.baseurl }}{{ post.url }}"</p>
+        {% endfor %}
+    </ul>
     <a href="trainning/2014/07/21/html-navigate-frame.html" target="_blank">navigate frame</a>
 </div>
 <hr />
