@@ -1,15 +1,11 @@
 ---
-layout: default
+layout: frame
 title: html frame
 category: trainning
 description: html navig frame trainning
 ---
 
-<h2>{{ page.title }}</h2>
-<hr />
-
-<div class="tranning">
-    <p>tranning navigate frame</p>
-</div>
-<hr />
-<p>{{ page.date | date_to_string }}</p>
+<FRAMESET cols="115,*"> 
+    <FRAME src="trainning/2014/07/21/html-navigate-menu.html"> 
+    <FRAME name="content" src="trainning/2014/07/21/html-navigate-content-a.html"> 
+</FRAMESET> 
