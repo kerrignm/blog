@@ -9,11 +9,9 @@ title: Kerrignm Blog
 
 <h1>Blog Posts</h1>
 
-<!--p>{{ site.baseurl }}</p-->
-
 <ul class="posts">
     {% for post in site.posts %} 
-        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}" style="text-decoration:none">{{ post.title }}</a><p>{{ post.url }}</p></li>
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}" style="text-decoration:none">{{ post.title }}</a></li>
     {% endfor %}
 </ul>
 
