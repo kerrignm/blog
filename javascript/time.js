@@ -1,4 +1,4 @@
-fuction formatetime(t)
+function formatetime(t)
 {
     return a/10 + '' + a%10;
 }
