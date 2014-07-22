@@ -17,8 +17,9 @@ function letstart()
     taskId = setInterval(showtime, 500);
 }
 
-/*window.onload = function()
+window.onload = function()
 {
-    //var div1=document.getElementById('div1');	div1.onclick=letstart;
+    //var div_showtime = document.getElementById('showtime');
+    //div_showtime.onclick=letstart;
     letstart();
-}*/
+}
