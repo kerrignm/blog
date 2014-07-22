@@ -8,8 +8,8 @@ function showtime()
     var minutes = now.getMinutes();
     var seconds = now.getSeconds();
     time = year + '/' + month + '/' + day + '/' + hours + ':' + minutes + ':' + seconds;
-    var div1=document.getElementById('div1');
-    div1.innerHTML = time;
+    var div_showtime = document.getElementById('showtime');
+    div_showtime.innerHTML = time;
 }
 
 function letstart()
