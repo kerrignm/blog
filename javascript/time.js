@@ -1,6 +1,6 @@
 function formatetime(t)
 {
-    return a/10 + '' + a%10;
+    return t/10 + '' + t%10;
 }
 
 function showtime()
