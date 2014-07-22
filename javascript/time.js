@@ -14,7 +14,15 @@ function showTime()
     var seconds = now.getSeconds();
     var time = year + '/' + formatTime(month) + '/' + formatTime(day) + '/' + formatTime(hours) + ':' + formatTime(minutes) + ':' + formatTime(seconds);
     var divShowtime = document.getElementById('showtime');
-    divShowtime.innerHTML = time;
+    if(divShowtime == null)
+    {
+        clearInterval(taskId);
+        alert("no showtime element!");
+    }
+    else
+    {
+        divShowtime.innerHTML = time;
+    }
 }
 
 function startShowTime()
