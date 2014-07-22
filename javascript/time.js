@@ -2,7 +2,7 @@ function formatetime(t)
 {
     if(t > 10)
     {
-        return t/10 + '' + t%10;
+        return (t-t%10)/10 + '' + t%10;
     }
     else
     {
