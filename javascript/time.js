@@ -2,7 +2,7 @@ function showtime()
 {
     var now = new Date();
     var year = now.getFullYear();
-    var month = now.getMonth()+1;
+    var month = now.getMonth() + 1;
     var day = now.getDate();
     var hours = now.getHours();
     var minutes = now.getMinutes();
@@ -19,7 +19,5 @@ function letstart()
 
 window.onload = function()
 {
-    //var div_showtime = document.getElementById('showtime');
-    //div_showtime.onclick=letstart;
     letstart();
 }
