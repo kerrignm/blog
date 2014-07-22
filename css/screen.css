@@ -45,3 +45,8 @@ ul.posts span {
     background-color: WhiteSmoke;
 }
 
+#showtime {
+    text-align: right;
+    margin-right: 2em;
+}
+
