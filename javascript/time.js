@@ -29,8 +29,3 @@ function startShowTime()
 {
     taskId = setInterval(showTime, 500);
 }
-
-window.onload = function()
-{
-    startShowTime();
-}
