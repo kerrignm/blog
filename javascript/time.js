@@ -1,9 +1,9 @@
-function formatetime(t)
+function formatTime(t)
 {
     return (t-t%10)/10 + '' + t%10;
 }
 
-function showtime()
+function showTime()
 {
     var now = new Date();
     var year = now.getFullYear();
@@ -12,17 +12,17 @@ function showtime()
     var hours = now.getHours();
     var minutes = now.getMinutes();
     var seconds = now.getSeconds();
-    time = year + '/' + formatetime(month) + '/' + formatetime(day) + '/' + formatetime(hours) + ':' + formatetime(minutes) + ':' + formatetime(seconds);
-    var div_showtime = document.getElementById('showtime');
-    div_showtime.innerHTML = time;
+    time = year + '/' + formatTime(month) + '/' + formatTime(day) + '/' + formatTime(hours) + ':' + formatTime(minutes) + ':' + formatTime(seconds);
+    var divShowtime = document.getElementById('showtime');
+    divShowtime.innerHTML = time;
 }
 
-function letstart()
+function startShowTime()
 {
-    taskId = setInterval(showtime, 500);
+    taskId = setInterval(showTime, 500);
 }
 
 window.onload = function()
 {
-    letstart();
+    startShowTime();
 }
