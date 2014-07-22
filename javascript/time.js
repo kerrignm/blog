@@ -12,7 +12,7 @@ function showTime()
     var hours = now.getHours();
     var minutes = now.getMinutes();
     var seconds = now.getSeconds();
-    time = year + '/' + formatTime(month) + '/' + formatTime(day) + '/' + formatTime(hours) + ':' + formatTime(minutes) + ':' + formatTime(seconds);
+    var time = year + '/' + formatTime(month) + '/' + formatTime(day) + '/' + formatTime(hours) + ':' + formatTime(minutes) + ':' + formatTime(seconds);
     var divShowtime = document.getElementById('showtime');
     divShowtime.innerHTML = time;
 }
