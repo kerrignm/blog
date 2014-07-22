@@ -13,3 +13,9 @@ function stopCount()
     setTimeout("document.getElementById('txt').value = 0", 0);
     clearTimeout(t);
 }
+
+function upper()
+{
+    var x = document.getElementById("fname");
+    x.value = x.value.toUpperCase();
+}
