@@ -1,13 +1,6 @@
 function formatetime(t)
 {
-    if(t > 10)
-    {
-        return (t-t%10)/10 + '' + t%10;
-    }
-    else
-    {
-        return t;
-    }
+    return (t-t%10)/10 + '' + t%10;
 }
 
 function showtime()
