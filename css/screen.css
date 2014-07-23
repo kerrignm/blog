@@ -36,6 +36,10 @@ a.menu_style {
     text-decoration: none;
 }
 
+p.txt_indent {
+    text-indent: 2em;
+}
+
 .trainning {
     margin: auto 1em auto 1em;
     /*padding: 1em auto 1em auto; why this not working ok?*/
