@@ -8,6 +8,13 @@ description: regular expressions prime content
 <body>
 
 <style type="text/css">
+
+    p {
+        text-indent: 2em;
+        line-height: 140%;
+        margin: 0.5em 1em;
+    }
+    
     span {
         margin: 0.25em;
     }
@@ -19,18 +26,23 @@ description: regular expressions prime content
     .code {
         color: blue;
     }
+    
     .regex {
         color: red;
     }
+    
     .part {
         color: green;
     }
+    
     .string {
         font-style: italic;
     }
+    
     .desc {
         text-decoration: underline;
     }
+    
     .note {
         float: right;
         width: 20em;
@@ -44,6 +56,7 @@ description: regular expressions prime content
 <h2><a name="Chapter01">正则表达式是什么</a></h2>
 <p class="txt_indent">在编写处理字符串的程序或网页时，经常会有查找符合某些复杂规则的字符串的需要。<span class="name">正则表达式</span>就是用于描述这些规则的工具。换句话说，正则表达式就是记录文本规则的代码。</p>
 <p class="txt_indent">很可能你使用过Windows/Dos下用于文件查找的<span class="name">通配符(wildcard)</span>，也就是<span class="code">*</span>和<span class="code">?</span>。如果你想查找某个目录下的所有的Word文档的话，你会搜索<span class="regex">*.doc</span>。在这里，<span class="code">*</span>会被解释成任意的字符串。和通配符类似，正则表达式也是用来进行文本匹配的工具，只不过比起通配符，它能更精确地描述你的需求——当然，代价就是更复杂——比如你可以编写一个正则表达式，用来查找<span class="desc">所有以0开头，后面跟着2-3个数字，然后是一个连字号“-”，最后是7或8位数字的字符串</span>(像<span class="string">010-12345678</span>或<span class="string">0376-7654321</span>)。</p>
+<br />
 
 <h2><a name="Chapter02">入门</a></h2>
 <p class="txt_indent">学习正则表达式的最好方法是从例子开始，理解例子之后再自己对例子进行修改，实验。下面给出了不少简单的例子，并对它们作了详细的说明。</p>
@@ -59,6 +72,7 @@ description: regular expressions prime content
 <p class="txt_indent"><span class="regex">0\d\d-\d\d\d\d\d\d\d\d</span>匹配这样的字符串：<span class="desc">以0开头，然后是两个数字，然后是一个连字号“-”，最后是8个数字</span>(也就是中国的电话号码。当然，这个例子只能匹配区号为3位的情形)。</p>
 <p class="txt_indent">这里的<span class="part">\d</span>是个新的元字符，匹配<span class="desc">一位数字(0，或1，或2，或……)</span>。<span class="part">-</span>不是元字符，只匹配它本身——连字符(或者减号，或者中横线，或者随你怎么称呼它)。</p>
 <p class="txt_indent">为了避免那么多烦人的重复，我们也可以这样写这个表达式：<span class="regex">0\d{2}-\d{8}</span>。这里<span class="part">\d</span>后面的<span class="part">{2}</span>(<span class="part">{8}</span>)的意思是前面<span class="part">\d</span><span class="desc">必须连续重复匹配2次(8次)</span>。</p>
+<br />
 <p class="txt_indent">This chapter explains 03</p>
 <p class="txt_indent">This chapter explains 03</p>
 <p class="txt_indent">This chapter explains 03</p>
