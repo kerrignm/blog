@@ -32,6 +32,10 @@ ul.posts span {
     font-size: 80%;
 }
 
+a.menu_style {
+    text-decoration: none;
+}
+
 .trainning {
     margin: auto 1em auto 1em;
     /*padding: 1em auto 1em auto; why this not working ok?*/
