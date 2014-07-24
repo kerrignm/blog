@@ -86,11 +86,67 @@ description: regular expressions prime content
         border: solid 1px gray;
         clear: right;
     }
+    
+    #clearButton, #hideButton {
+        text-decoration: none;
+        border: solid 1px gray;
+        background-color: #eee;
+    }
 </style>
+<script type="text/javascript">
+    function clearFormats() {
+        var spans = document.getElementsByTagName("span");
+        for (var i = 0; i < spans.length; i++) {
+            spans[i].bakClassName = spans[i].className;
+            spans[i].className = "";
+        }
+        var button = document.getElementById("clearButton");
+        button.innerHTML = "恢复格式";
+        button.onclick = setFormats;
+        return false;
+    }
+    function setFormats() {
+        var spans = document.getElementsByTagName("span");
+        for (var i = 0; i < spans.length; i++) {
+            spans[i].className = spans[i].bakClassName;
+        }
+        var button = document.getElementById("clearButton");
+        button.innerHTML = "清除格式";
+        button.onclick = clearFormats;
+        return false;
+    }
+    function hideNotes() {
+        var notes = document.getElementsByClassName('note');
+        for (var i = 0; i < notes.length; i++) {
+            notes[i].style.display = 'none';
+        }
+        var button = document.getElementById("hideButton");
+        button.innerHTML = "显示边注";
+        button.onclick = showNotes;
+        return false;
+    }
+    function showNotes() {
+        var notes = document.getElementsByClassName('note');
+        for (var i = 0; i < notes.length; i++) {
+            notes[i].style.display = 'block';
+        }
+        var button = document.getElementById("hideButton");
+        button.innerHTML = "隐藏边注";
+        button.onclick = hideNotes;
+        return false;
+    }
+</script>
+
+<h2><a name="Chapter00">前言</a></h2>
+<p>本文来源于<a href="http://www.jb51.net/tools/zhengze.html">正则表达式30分钟入门教程</a>，作为入门教程之外，本文还试图成为可以在日常工作中使用的正则表达式语法参考手册。</p>
+<p>一下两个选项，可以用来选择清除网页排版格式和隐藏边注。</p>
+<p><a id="clearButton" onClick="return clearFormats();">清除格式</a>&nbsp;文本格式约定：<span class="name">专业术语</span>&nbsp;<span class="code">元字符/语法格式</span>&nbsp;<span class="regex">正则表达式</span>&nbsp;<span class="part">正则表达式中的一部分(用于分析)</span>&nbsp;<span class="string">对其进行匹配的源字符串</span>&nbsp;<span class="desc">对正则表达式或其中一部分的说明</span></p>
+<p><a id="hideButton" onClick="return hideNotes();">隐藏边注</a>&nbsp;本文右边有一些注释，主要是用来提供一些相关信息，或者给没有程序员背景的读者解释一些基本概念，通常可以忽略。</p>
+<br />
 
 <h2><a name="Chapter01">正则表达式是什么</a></h2>
-<p class="txt_indent">在编写处理字符串的程序或网页时，经常会有查找符合某些复杂规则的字符串的需要。<span class="name">正则表达式</span>就是用于描述这些规则的工具。换句话说，正则表达式就是记录文本规则的代码。</p>
-<p class="txt_indent">很可能你使用过Windows/Dos下用于文件查找的<span class="name">通配符(wildcard)</span>，也就是<span class="code">*</span>和<span class="code">?</span>。如果你想查找某个目录下的所有的Word文档的话，你会搜索<span class="regex">*.doc</span>。在这里，<span class="code">*</span>会被解释成任意的字符串。和通配符类似，正则表达式也是用来进行文本匹配的工具，只不过比起通配符，它能更精确地描述你的需求——当然，代价就是更复杂——比如你可以编写一个正则表达式，用来查找<span class="desc">所有以0开头，后面跟着2-3个数字，然后是一个连字号“-”，最后是7或8位数字的字符串</span>(像<span class="string">010-12345678</span>或<span class="string">0376-7654321</span>)。</p>
+<p">在编写处理字符串的程序或网页时，经常会有查找符合某些复杂规则的字符串的需要。<span class="name">正则表达式</span>就是用于描述这些规则的工具。换句话说，正则表达式就是记录文本规则的代码。</p>
+<p>很可能你使用过Windows/Dos下用于文件查找的<span class="name">通配符(wildcard)</span>，也就是<span class="code">*</span>和<span class="code">?</span>。如果你想查找某个目录下的所有的Word文档的话，你会搜索<span class="regex">*.doc</span>。在这里，<span class="code">*</span>会被解释成任意的字符串。和通配符类似，正则表达式也是用来进行文本匹配的工具，只不过比起通配符，它能更精确地描述你的需求——当然，代价就是更复杂——比如你可以编写一个正则表达式，用来查找<span class="desc">所有以0开头，后面跟着2-3个数字，然后是一个连字号“-”，最后是7或8位数字的字符串</span>(像<span class="string">010-12345678</span>或<span class="string">0376-7654321</span>)。</p>
 <br />
 
 <h2><a name="Chapter02">入门</a></h2>
