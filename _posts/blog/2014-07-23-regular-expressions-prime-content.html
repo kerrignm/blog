@@ -651,4 +651,159 @@ description: regular expressions prime content
 </table>
 <br />
 
+<h2><a name="Chapter18">元字符列表</a></h2>
+<table>
+	<caption>单字符元字符的列表以及它们在正则表达式中的行为</caption>
+	<thead>
+	<tr>
+		<th scope="col">元字符</th>
+		<th scope="col">行为</th>
+		<th scope="col">示例</th>
+	</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<p><span class="code">*</span></p>
+			</td>
+			<td>
+				<p><span class="desc">零次或多次匹配前面的字符或子表达式。</span></p>
+				<p><span class="desc">等效于0,}。</span></p>
+			</td>
+			<td>
+				<p><span class="desc">zo*与&ldquo;z&rdquo;和&ldquo;zoo&rdquo;匹配。</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p><span class="code">+</span></p>
+			</td>
+			<td>
+				<p><span class="desc">一次或多次匹配前面的字符或子表达式。</span></p>
+				<p><span class="desc">等效于{1,}。</p>
+			</td>
+			<td>
+				<p><span class="desc">zo+与&ldquo;zo&rdquo;和&ldquo;zoo&rdquo;匹配，但与&ldquo;z&rdquo;不匹配。</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p><span class="code">?</span></p>
+			</td>
+			<td>
+				<p><span class="desc">零次或一次匹配前面的字符或子表达式。</span></p>
+				<p><span class="desc">等效于{0,1}。</span></p>
+				<p><span class="desc">当 ?紧随任何其他限定符（*、+、?、{n}、{n,} 或 {n,m}）之后时，匹配模式是非贪婪的。非贪婪模式匹配搜索到的、尽可能少的字符串，而默认的贪婪模式匹配搜索到的、尽可能多的字符串。</span></p>
+			</td>
+			<td>
+				<p><span class="desc">zo?与&ldquo;z&rdquo;和&ldquo;zo&rdquo;匹配，但与&ldquo;zoo&rdquo;不匹配。</span></p>
+				<p><span class="desc">o+?只与&ldquo;oooo&rdquo;中的单个&ldquo;o&rdquo;匹配，而o+与所有&ldquo;o&rdquo;匹配。</span></p>
+				<p><span class="desc">do(es)?与&ldquo;do&rdquo;或&ldquo;does&rdquo;中的&ldquo;do&rdquo;匹配。</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p><span class="code">^</span></p>
+			</td>
+			<td>
+				<p><span class="desc">匹配搜索字符串开始的位置。如果标志中包括m（多行搜索）字符，^ 还将匹配 \n 或 \r 后面的位置。</span></p>
+				<p><span class="desc">如果将 ^ 用作括号表达式中的第一个字符，则会对字符集求反。</span></p>
+			</td>
+			<td>
+				<p><span class="desc">^\d{3}与搜索字符串开始处的3个数字匹配。</span></p>
+				<p><span class="desc">[^abc]与除 a、b 和 c 以外的任何字符匹配。</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p><span class="code">$</span></p>
+			</td>
+			<td>
+				<p><span class="desc">匹配搜索字符串结尾的位置。如果标志中包括m（多行搜索）字符，^ 还将匹配 \n 或 \r 前面的位置。</span></p>
+			</td>
+			<td>
+				<p><span class="desc">\d{3}$与搜索字符串结尾处的3个数字匹配。</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p><span class="code">.</span></p>
+			</td>
+			<td>
+				<p><span class="desc">匹配除换行符 \n 之外的任何单个字符。若要匹配包括 \n 在内的任意字符，请使用诸如[\s\S]之类的模式。</span></p>
+			</td>
+			<td>
+				<p><span class="desc">a.c与&ldquo;abc&rdquo;、&ldquo;a1c&rdquo;和&ldquo;a-c&rdquo;匹配。</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p><span class="code">[]</span></p>
+			</td>
+			<td>
+				<p><span class="desc">标记括号表达式的开始和结尾。</span></p>
+			</td>
+			<td>
+				<p><span class="desc">[1-4]与&ldquo;1&rdquo;、&ldquo;2&rdquo;、&ldquo;3&rdquo;或&ldquo;4&rdquo;匹配。[^aAeEiIoOuU]与任何非元音字符匹配。</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p><span class="code">{}</span></p>
+			</td>
+			<td>
+				<p><span class="desc">标记限定符表达式的开始和结尾。</span></p>
+			</td>
+			<td>
+				<p><span class="desc">a{2,3}与&ldquo;aa&rdquo;和&ldquo;aaa&rdquo;匹配。</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p><span class="code">()</span></p>
+			</td>
+			<td>
+				<p><span class="desc">标记子表达式的开始和结尾。可以保存子表达式以备将来之用。</span></p>
+			</td>
+			<td>
+				<p><span class="desc">A(\d)与&ldquo;A0&rdquo;至&ldquo;A9&rdquo;匹配。保存该数字以备将来之用。</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p><span class="code">|</span></p>
+			</td>
+			<td>
+				<p><span class="desc">指示在两个或多个项之间进行选择。</span></p>
+			</td>
+			<td>
+				<p><span class="desc">z|food与&ldquo;z&rdquo;或&ldquo;food&rdquo;匹配。(z|f)ood与&ldquo;zood&rdquo;或&ldquo;food&rdquo;匹配。</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p><span class="code">/</span></p>
+			</td>
+			<td>
+				<p><span class="desc">表示 JScript 中的文本正则表达式模式的开始或结尾。在第二个&ldquo;/&rdquo;后添加单字符标志可以指定搜索行为。</span></p>
+			</td>
+			<td>
+				<p><span class="desc">/abc/gi是与&ldquo;abc&rdquo;匹配的 JScript 文本正则表达式。g（全局）标志指定查找模式的所有匹配项，i（忽略大小写）标志使搜索不区分大小写。</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p><span class="code">\</span></p>
+			</td>
+			<td>
+				<p><span class="desc">将下一字符标记为特殊字符、文本、反向引用或八进制转义符。</span></p>
+			</td>
+			<td>
+				<p><span class="desc">\n与换行符匹配。\(与&ldquo;(&rdquo;匹配。\\与&ldquo;\&rdquo;匹配。</span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br />
+
 </body>
