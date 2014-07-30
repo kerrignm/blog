@@ -1,0 +1,64 @@
+---
+layout: default
+title: find hanzi
+category: notes
+description: find hanzi in string
+---
+
+<h2>{{ page.title }}</h2>
+<hr />
+
+<pre>
+package com.kerrignm;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int count = 0;
+        String regExZ = "[\\u4e00-\\u9fa5]";
+        String regExC = "[\\u0020-\\u007F]";
+
+        String str = "我i是am中国人chinses";
+
+        Pattern p = Pattern.compile(regExZ);
+
+        Matcher m = p.matcher(str);
+
+        while (m.find()) {
+
+            for (int i = 0; i <= m.groupCount(); i++) {
+
+                count = count + 1;
+
+            }
+
+        }
+        System.out.println("find " + count + " hanzi");
+
+        p = Pattern.compile(regExC);
+
+        m = p.matcher(str);
+        
+        count = 0;
+
+        while (m.find()) {
+
+            for (int i = 0; i <= m.groupCount(); i++) {
+
+                count = count + 1;
+
+            }
+
+        }
+        System.out.println("find " + count + " char");
+
+    }
+}
+</pre>
+
+<hr />
+
+<p>{{ page.date | date_to_string }}</p>
