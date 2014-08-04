@@ -13,8 +13,10 @@ description: jquery example
         $("button").click(function(){
             if (isShow) {
                 $("p").hide();
+                $(this).text(Show);
             } else {
                 $("p").show();
+                $(this).text(Hide);
             }
             isShow = !isShow;
         });
@@ -24,4 +26,4 @@ description: jquery example
 <h2>This is a heading</h2>
 <p>This is a paragraph.</p>
 <p>This is another paragraph.</p>
-<button type="button">Click me</button>
+<button type="button">Hide</button>
