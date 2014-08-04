@@ -8,9 +8,14 @@ description: jquery example
 <!--script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script-->
 <script type="text/javascript" src="jquery/jquery-1.7.1.min.js"></script>
 <script type="text/javascript">
+    var isShow = true;
     $(document).ready(function(){
         $("button").click(function(){
-            $("p").hide();
+            if (isShow) {
+                $("p").hide();
+            } else {
+                $("p").show();
+            }
         });
     });
 </script>
