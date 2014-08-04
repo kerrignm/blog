@@ -23,11 +23,21 @@ description: javascript study data
     </fieldset>
 </form>
 <br />
+
 <div class="trainning">
     <p>trainning test onchange 事件</p>
     <p>请输入英文字符：<input type="text" id="fname" onchange="upper()"></p>
     <p>当离开输入字段时，会触发将输入文本转换为大写。</p>
 </div>
+<br />
+
+<script type="text/javascript" src="jquery/jq-example.js"></script>
+<div class="trainning">
+    <p>trainning test jquery load txt</p>
+    <div id="div_01"><p>通过 AJAX 改变文本</p></div>
+    <button id="btn_01" type="button">改变内容</button>
+</div>
+
 <hr />
 
 <p>{{ page.date | date_to_string }}</p>
